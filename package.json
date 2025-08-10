@@ -1,0 +1,52 @@
+{
+  "name": "usx-starter-1-0-0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.18 <23"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "type:check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "bundle:analyze": "ANALYZE=true next build",
+    "seed:owner": "bash ./scripts/seed-owner.sh",
+    "check:emoji": "bash -lc \"! grep -R --exclude-dir=node_modules --exclude-dir=.git -n -- $'[\\U0001F300-\\U0001FAFF]' app src\""
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.5.2",
+    "@supabase/supabase-js": "2.54.0",
+    "clsx": "2.1.1",
+    "lucide-react": "0.441.0",
+    "next": "14.2.31",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "2.6.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "14.2.31",
+    "@tailwindcss/postcss": "4.1.11",
+    "@types/node": "20.19.10",
+    "@types/react": "18.3.23",
+    "@types/react-dom": "18.3.7",
+    "@typescript-eslint/eslint-plugin": "8.39.0",
+    "@typescript-eslint/parser": "8.39.0",
+    "autoprefixer": "10.4.21",
+    "eslint": "9.33.0",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.2",
+    "postcss": "8.5.6",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "0.6.14",
+    "tailwindcss": "4.1.11",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.6.0"
+}
